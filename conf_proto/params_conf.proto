@@ -1,0 +1,41 @@
+syntax = "proto2";
+package model;
+
+// simulation relative conf
+
+message SimulationConf {
+    optional double T = 1;
+    optional int32 cycle = 2;
+}
+
+// inverted pendulum
+message PendulumConf {
+    optional double m = 1;
+    optional double M = 2;
+    optional double l = 3;
+    optional double N = 4;
+    optional double x1_init = 5;
+    optional double x2_init = 6;
+    optional double T = 7;
+    optional double K = 8;
+    optional double y1_init = 9;
+    optional double y2_init = 10;
+    optional double y1_min = 11;
+    optional double y1_max = 12;
+}
+
+// animator
+message AnimatorConf {
+    optional double workbench_length = 1;
+    optional double cart_length = 2;
+    optional double pole_length = 3;
+}
+
+
+// pid controller
+message PIDConf {
+    optional double kp = 1;
+    optional double ki = 2;
+    optional double kd = 3;
+    optional double integ_satuation = 4;
+}
